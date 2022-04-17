@@ -1,0 +1,17 @@
+{% extends "ud-layout.html" %}
+
+{% block content %}
+
+    <script src="{{url_for('static', filename='js/mode.js')}}"></script>
+	<script>
+		let title = {{title|tojson}}
+		console.log(title)
+	</script>
+
+    <div class="vertical-center text-align-center mx-10p">
+        <button type="button" class="btn btn-outline-light mt-2" onclick="learnPage()">Learn</button>
+        <button type="button" class="btn btn-outline-light mt-2" onclick="quizPage()">Quiz</button>
+    </div>
+	
+
+{% endblock %}

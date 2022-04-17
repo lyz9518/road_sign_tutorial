@@ -1,0 +1,18 @@
+{% extends "ud-layout.html" %}
+
+{% block content %}
+
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+	<script>
+		let title = {{title|tojson}}
+		console.log(items)
+	</script>
+
+    <div class="vertical-center mx-10p">
+        <p class="display-2 text-light"><b>Get to Know Road Signs</b></p>
+        <p class="h3 text-light my-2">Driver's License Knowledge Test</p>
+        <button type="button" class="btn btn-outline-light mt-2" onclick="selectMode()">Get Started</button>
+    </div>
+	
+
+{% endblock %}
