@@ -3,7 +3,7 @@ tutorial = {
         1: {
             "id": 1,
             "name": "STOP SIGN",
-            "image_link": "XXX",
+            "image_link": "",
             "hint": "Look at the text inside the sign",
             "description": "The STOP sign is the only octagon-shaped (8-sided) sign you see on the highway. At an intersection with a STOP sign, you must stop completely, check for pedestrians and cross traffic to clear the intersection before you go again. Slowing down without coming to a full stop is illegal.",
             "category": "Regulatory Sign"
@@ -132,7 +132,7 @@ tutorial = {
             "id": 17,
             "name": "OPPOSING TRAFFIC HAS EXTENDED GREEN SIGN",
             "image_link": "",
-            "hint": "Text, needs to be read carefully",
+            "hint": "Text, Needs to be read carefully",
             "description": "This sign is posted where opposing traffic may continue to move after your signal has turned red.",
             "category": "Regulatory Sign"
         },
@@ -146,8 +146,8 @@ tutorial = {
         }
     },
     "warning":{
-        2:{
-            "id": 2,
+        19:{
+            "id": 19,
             "name": "LEFT CURVE",
             "image_link": "XXX",
             "hint": "Yellow background, Arrow = Road",
