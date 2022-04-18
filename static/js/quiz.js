@@ -7,4 +7,5 @@ function changeTitle(){
 
 $(document).ready(function(){
 	changeTitle()
+	timer(1)
 });
