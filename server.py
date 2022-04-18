@@ -19,6 +19,10 @@ def index():
 def mode():
     return render_template('ud-mode.html', title = 'Select Mode')
 
+@app.route('/selectChapter')
+def select():
+    return render_template('ud-selectChapter.html')
+
 @app.route('/quiz/')
 def generateQuiz(id = None):
     global quiz_questions
