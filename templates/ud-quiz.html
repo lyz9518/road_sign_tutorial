@@ -7,70 +7,14 @@
 		let title = {{title|tojson}}
         let num = {{num|tojson}}
         let question = {{question|tojson}}
+        let user_answers = {{user_answers|tojson}}
+        let marked_questions = {{marked_questions|tojson}}
         console.log(num)
 		console.log(title)
         console.log(question)
+        console.log(user_answers)
+        console.log(marked_questions)
 	</script>
-
-<script>
-    function submitForm(radio){
-        let selected = radio.value;
-        let index = document.getElementById("index").value;
-        location.href="./QuizServlet?index=" + index + "&selected=" + selected;
-    }
-    function submitSA(){
-        let index = document.getElementById("index").value;
-        let sa = document.getElementById("sa").value;
-        location.href="./QuizServlet?index=" + index + "&selected=" + sa;
-    }
-    function timer(initial){
-        let currentTime = new Date();
-
-        let left = document.getElementById("timer").innerHTML.split(':')
-        let seconds = parseInt(left[0] * 60) + parseInt(left[1])
-        console.log(seconds)
-
-        seconds --
-        document.getElementById("timer").innerHTML = String(parseInt(seconds / 60)).padStart(2, '0') + ':' + String((seconds % 60)).padStart(2, '0')
-
-        // let seconds_float = difference / 1000;
-        // let seconds = parseInt(Math.round(seconds_float));
-        // console.log(seconds);
-        // let minutes = parseInt(seconds / 60);
-        // seconds = seconds % 60;
-        // console.log(minutes, seconds);
-
-        // if(minutes == 0 && seconds ==0){
-        //     location.href='./SubmitServlet';
-        //     alert("Timeout! Your quiz will be submitted now.");
-        //     return;
-        // }
-
-        // document.getElementById("timer").innerHTML = ("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-2);
-        if(initial == 1) {
-            setTimeout(timer, 1000, 0);
-        }else{
-            setTimeout(timer, 1000, 0);
-        }
-    }
-    function submit(){
-        let selected = document.getElementsByClassName("btn-secondary").length;
-        if(selected == 11){
-            location.href='./SubmitServlet';
-        }else{
-            if (window.confirm("You have not finished all the questions. Really?")) {
-                location.href='./SubmitServlet';
-            }
-        }
-    }
-    function mark(){
-        let index = document.getElementById("index").value;
-        location.href="./QuizServlet?mark=" + index;
-    }
-    function changeSA(){
-        document.getElementById("saved").innerHTML = "Not Saved";
-    }
-</script>
 
 	<style>
         #content{
@@ -80,7 +24,6 @@
             padding-right: 20px;
             margin-bottom: 50px;
         }
-
         #content button{
             align-content: center;
             width: 40px;
@@ -88,75 +31,81 @@
             display: inline-flex;
             margin-inline: 5px;
         }
+        #timer{
+            padding-top: 15px;
+            float: right;
+        }
+        .question-stem{
+            font-size: xx-large;
+            margin-top:10px;
+        }
+        .quiz-button{
+            width: 85px !important;
+            place-content: center;
+        }
+        .num-button{
+            display: inline;
+            place-content: center;
+        }
+        .question-image{
+            max-height: 200px;
+            float: right;
+            display:inline;
+            max-width:100%;
+        }
         label{
             display: inline !important;
         }
 	</style>
 
     <div class="vertical-center mx-10p">
-        <p card-text class="display-2 text-light mt-5"><b>Road Signs | Quiz</b></p>
+        <p card-text class="display-2 text-light mt-5"><b>Road Sign Quiz</b></p>
         <div id = "content">
             <div id="question_nums">
-                <button class="btn btn-outline-light btn-secondary"
-                        onclick="location.href='/quiz/1'" style="display: inline;
-                        padding-left: 8px">⭐</button>
-                <button class="btn btn-outline-light btn-secondary"
-                        onclick="location.href='/quiz/2'" style="display: inline;
-                        padding-left: 11px">2</button>
-                <button class="btn btn-outline-light"
-                        onclick="location.href='/quiz/3'" style="display: inline;
-                        padding-left: 11px">3</button>
-                <button class="btn btn-outline-light"
-                        onclick="location.href='/quiz/4'" style="display: inline;
-                        padding-left: 11px">4</button>
-                <button class="btn btn-outline-light"
-                        onclick="location.href='/quiz/5'" style="display: inline;
-                        padding-left: 11px">5</button>
+                {% for i in range(1, 11) %}
+                    <button class="btn btn-outline-light num-button {{'btn-secondary' if user_answers[i - 1] != 'X'}}" onclick="goToQuestion({{i}})">{{'⭐' if (i) in marked_questions else (i)}}</button>
+                {% endfor %}
             </div>
 
-            <h4 id="timer" class="text-light my-2" style="padding-top: 15px; float: right">20:00</h4>
-            <p hidden id="shouldEndTime">20:17:00</p>
+            <h4 id="timer" class="text-light my-2">20:00</h4>
 
-            <form class="mx-2" action="QuizServlet" method="GET" id="selection" style="margin-top:10px">
-                <input id="index" type="hidden" name="index" value="<%= index %>" />
-                <p class="text-light my-3 display-6" style="font-size: xx-large">
+            <div class="mx-2">
+                <p class="text-light my-3 question-stem">
                     {{num}}. {{question.stem}}
                 </p>
-                <div style="display:flex">
-                    <div style="width: 70%; float: left">
-
+                <div class="row">
+                    <div class="col-9">
                         <p class="text-light lead">
-                            <input type="radio" name="selected" id="A" value="A" onchange="submitForm(this)">
+                            <input type="radio" id="A" value="A" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='A'}}  {{'disabled' if question.A==''}}>
                             <label for="A"> A. {{question.A}}</label>
                         </p>
                         <p class="text-light lead">
-                            <input type="radio" name="selected" id="B" value="B" onchange="submitForm(this)">
+                            <input type="radio" id="B" value="B" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='B'}} {{'disabled' if question.B==''}}>
                             <label for="B"> B. {{question.B}}</label>
                         </p>
                         <p class="text-light lead">
-                            <input type="radio" name="selected" id="C" value="C">
+                            <input type="radio" id="C" value="C" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='C'}} {{'disabled' if question.C==''}}>
                             <label for="C"> C. {{question.C}}</label>
                         </p>
                         <p class="text-light lead">
-                            <input type="radio" name="selected" id="D" value="D">
+                            <input type="radio" id="D" value="D" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='D'}} {{'disabled' if question.D==''}}>
                             <label for="D"> D. {{question.D}}</label>
                         </p>
 
-                        <p><a onclick="mark()" style="text-decoration: none" class="text-light bi-bookmark"> &nbsp;Not Marked</a></p>
+                        <p><a class="text-light href bi-bookmark{{'-fill' if num in marked_questions}}" onclick="mark()"> &nbsp;{{'Not ' if num not in marked_questions}}Marked</a></p>
 
                     </div>
 
-                    <div style="width: 30%; float: left">
-                        <img src="{{question.image}}" style="max-height: 200px; float: right; display:inline; max-width:100%">
+                    <div class="col-3">
+                        <img class="question-image" src="{{question.image}}">
                     </div>
                 </div>
+            </div>
 
-            </form>
-            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href='./quiz.jsp?index=2'">Previous</button>
-            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href='./quiz.jsp?index=2'">Next</button>
-            <button class="btn btn-outline-light my-4" style="width:auto" onclick="submit()" id="submitButton">Submit</button>
+            <button class="btn btn-outline-light my-4 quiz-button" onclick="goToQuestion(num-1)" {{'disabled' if num==1}}>Previous</button>
+            <button class="btn btn-outline-light my-4 quiz-button" onclick="submit()" id="submitButton">Submit</button>
+            <button class="btn btn-outline-light my-4 quiz-button" onclick="goToQuestion(num+1)" {{'disabled' if num==10}}>Next</button>
         </div>
     </div>
 	
-
 {% endblock %}
