@@ -7,9 +7,19 @@
         let num = {{num|tojson}}
         console.log(num)
         console.log(info)
+
+        function popUp() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
     </script>
 
     <style>
+        .display-2 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+        }
+
         #content{
             height: auto;
             background: rgba(0,0,0,.5);
@@ -27,11 +37,77 @@
             margin-inline: 5px;
         }
 
+        .title{
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .text1{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        }
+
+        /* The actual popup */
+        .popup .popuptext {
+        visibility: hidden;
+        width: auto;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        }
+        
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+        from {opacity: 0;} 
+        to {opacity: 1;}
+        }
+
+        @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:1 ;}
+        }
+
 
 	</style>
 
     <div class="vertical-center mx-10p">
-        <p card-text class="display-2 text-light mt-0"><b> {{info.name}} | Regulatory Sign</b></p>
+        <p card-text class="display-2 text-light mt-0"><b> {{info.name}} | {{info.category}}</b></p>
         <div id = "content">
 
             <div class="row">
@@ -39,15 +115,17 @@
             </div>
 
             <div class="row">
-                <p class="text-light lead">
-
+                <p class="text-light lead text1">
+                    {{info.description}}
                 </p>
             </div>
 
             
-            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href=''">Previous</button>
-            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href=''">Hint</button>
-            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href=''">Next</button>
+            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href='../intro'">Previous</button>
+            <div class="btn btn-outline-light my-4 popup" style="width:auto" onclick="popUp()">Hint
+                <span class="popuptext" id="myPopup">{{info.hint}}</span>
+            </div>
+            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href='./learn/2'">Next</button>
             
         </div>
     </div>
