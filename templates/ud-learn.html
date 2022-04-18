@@ -1,0 +1,56 @@
+{% extends "ud-layout.html" %}
+
+{% block content %}
+    <script src="{{url_for('static', filename='js/learn.js')}}"></script>
+    <script>
+        let info = {{info|tojson}}
+        let num = {{num|tojson}}
+        console.log(num)
+        console.log(info)
+    </script>
+
+    <style>
+        #content{
+            height: auto;
+            background: rgba(0,0,0,.5);
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 50px;
+            padding-top: 10px;
+        }
+
+        #content button{
+            align-content: center;
+            width: 40px;
+            margin-top: 20px;
+            display: inline-flex;
+            margin-inline: 5px;
+        }
+
+
+	</style>
+
+    <div class="vertical-center mx-10p">
+        <p card-text class="display-2 text-light mt-0"><b> {{info.name}} | Regulatory Sign</b></p>
+        <div id = "content">
+
+            <div class="row">
+                <p class="text-light lead title">{{info.name}}</p>
+            </div>
+
+            <div class="row">
+                <p class="text-light lead">
+
+                </p>
+            </div>
+
+            
+            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href=''">Previous</button>
+            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href=''">Hint</button>
+            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href=''">Next</button>
+            
+        </div>
+    </div>
+	
+
+{% endblock %}

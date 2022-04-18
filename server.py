@@ -4,12 +4,17 @@ from flask import Response, request, jsonify, redirect
 from data import *
 import uuid
 import random
+import tutorial_data
+
 app = Flask(__name__)
 
 
 quiz_questions = []
 user_answers = ['X'] * 10
 marked_questions = []
+
+# data
+data = tutorial_data.tutorial
 
 # ROUTES
 
@@ -20,6 +25,14 @@ def index():
 @app.route('/mode')
 def mode():
     return render_template('ud-mode.html', title = 'Select Mode')
+
+@app.route('/selectChapter')
+def select():
+    return render_template('ud-selectChapter.html')
+
+@app.route('/intro')
+def intro():
+    return render_template('ud-intro.html')
 
 @app.route('/quiz/')
 def generateQuiz(id = None):
@@ -77,7 +90,19 @@ def answer():
 
     return jsonify({'status': 200, 'user_answers': user_answers})
 
+@app.route('/learn/<num>')
+def learn(num = None):
+    try:
+        num = int(num)
+    except:
+        return redirect("/learn/1", code=302)
+
+    if num < 2:
+        return render_template('ud-learn.html', info=data["regulatory"][num], num = num)
+
+    return render_template('ud-learn.html', info=data["warning"][num], num = num)
+
 
 # Binding
 if __name__ == '__main__':
-   app.run(debug = True, host="0.0.0.0", port=9999)
+   app.run(debug = True, host="0.0.0.0", port="2022")

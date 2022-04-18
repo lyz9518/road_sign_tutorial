@@ -1,0 +1,79 @@
+{% extends "ud-layout.html" %}
+
+{% block content %}
+
+    <style>
+        #content{
+            height: auto;
+            background: rgba(0,0,0,.5);
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 50px;
+        }
+
+        #content button{
+            align-content: center;
+            width: 40px;
+            margin-top: 20px;
+            display: inline-flex;
+            margin-inline: 5px;
+        }
+
+        .start_button{
+            border-radius: 12px;
+        }
+        
+        label{
+            display: inline !important;
+        }
+	</style>
+
+    <div class="vertical-center mx-10p">
+        <p card-text class="display-2 text-light mt-5"><b>Select Chapter</b></p>
+        <div id = "content">
+
+            <div class="row">
+                <div class="col-md-5">
+                    <p class="text-light my-3 display-6" style="font-size: xx-large">
+                        Introduction
+                    </p>
+                </div>
+
+                <div class="col-md-3">
+                    <button class="btn btn-outline-light my-4 start_button" style="width:auto; float: right" onclick="location.href='./intro'">Start</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5">
+                    <p class="text-light my-3 display-6" style="font-size: xx-large">
+                        Regulatory Signs
+                    </p>
+                </div>
+
+                <div class="col-md-3">
+                    <button class="btn btn-outline-light my-4 start_button" style="width:auto; float: right" onclick="location.href=''">Start</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5">
+                    <p class="text-light my-3 display-6" style="font-size: xx-large">
+                        Warning Signs
+                    </p>
+                </div>
+
+                <div class="col-md-3">
+                    <button class="btn btn-outline-light my-4 start_button" style="width:auto; float: right" onclick="location.href=''">Start</button>
+                </div>
+            </div>
+            
+           
+            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href=''">⭐ Marked</button>
+            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href='./quiz/1'">Mock Test</button>
+            
+        </div>
+    </div>
+	
+
+{% endblock %}

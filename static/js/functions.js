@@ -58,6 +58,10 @@ function quizPage() {
     window.location.href = '/quiz'
 }
 
+function learnPage() {
+	window.location.href = '/selectChapter'
+}
+
 
 function redirect(url) {
     window.location.href = url
