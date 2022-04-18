@@ -1,4 +1,4 @@
-data = [
+quiz_data = [
   {
     "id": 144,
     "stem": "What does this sign mean?",
@@ -1241,7 +1241,7 @@ data = [
   },
   {
     "id": 550,
-    "stem": "What does this sign mean?这个标志什么意思?",
+    "stem": "What does this sign mean?",
     "A": "The maximum speed limit is 50 mph 最高限速是 50 英里/小时",
     "B": "The minimum speed limit is 50 mph 最低限速是 50 英里/小时",
     "C": "The speed limit during the day is 50 mph 白天限速是 50 英里/小时",
