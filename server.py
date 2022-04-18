@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify, redirect
-from data import *
+from quiz_data import *
 import uuid
 import random
 import tutorial_data
@@ -39,8 +39,7 @@ def generateQuiz(id = None):
     global quiz_questions
     global user_answers
     global marked_questions
-    quiz_questions = data[:]
-    quiz_questions = random.sample(data, 10)
+    quiz_questions = random.sample(quiz_data, 10)
     user_answers = ['X'] * 10
     marked_questions = []
 

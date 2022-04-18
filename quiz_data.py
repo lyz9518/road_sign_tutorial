@@ -1,4 +1,4 @@
-data = [
+quiz_data = [
   {
     "id": 144,
     "stem": "What does this sign mean?",
