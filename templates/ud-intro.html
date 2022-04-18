@@ -1,0 +1,49 @@
+{% extends "ud-layout.html" %}
+
+{% block content %}
+
+    <style>
+        #content{
+            height: auto;
+            background: rgba(0,0,0,.5);
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 50px;
+            padding-top: 10px;
+        }
+
+        #content button{
+            align-content: center;
+            width: 40px;
+            margin-top: 20px;
+            display: inline-flex;
+            margin-inline: 5px;
+        }
+
+
+	</style>
+
+    <div class="vertical-center mx-10p">
+        <p card-text class="display-2 text-light mt-0"><b>Introduction</b></p>
+        <div id = "content">
+
+            <p class="text-light lead">
+                The written test for a Class D, M, DJ, MJ or E license examines knowledge of the rules of the road, safe
+                driving techniques, road signs and the laws about alcohol and drug use while driving. To pass the written
+                test, you must correctly answer at least 14 of the 20 questions asked, but you must correctly answer two of
+                the four questions about road signs. <br> <br>
+
+                This tutorial will help you better understand and recognize the road signs in NY state. <br> <br>
+
+                **The quizzes followed the tutorials can only be used for practice purpose. The official test is issued and
+                regulated by the New York Department of Motor Vehicles
+            </p>
+            
+           
+            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href='./learn/1'">Next</button>
+            
+        </div>
+    </div>
+	
+
+{% endblock %}

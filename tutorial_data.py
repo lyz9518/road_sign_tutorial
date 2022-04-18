@@ -1,6 +1,6 @@
 tutorial = {
     "regulatory":{
-        {
+        1:{
             "id": 1,
             "name": "STOP SIGN",
             "image_link": "XXX",
@@ -10,7 +10,7 @@ tutorial = {
         }
     },
     "warning":{
-        {
+        2:{
             "id": 2,
             "name": "LEFT CURVE",
             "image_link": "XXX",

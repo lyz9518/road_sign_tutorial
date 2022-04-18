@@ -2,8 +2,6 @@
 
 {% block content %}
 
-    <script src="{{url_for('static', filename='js/selectChapter.js')}}"></script>
-
     <style>
         #content{
             height: auto;
@@ -20,6 +18,11 @@
             display: inline-flex;
             margin-inline: 5px;
         }
+
+        .start_button{
+            border-radius: 12px;
+        }
+        
         label{
             display: inline !important;
         }
@@ -37,7 +40,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href=''">Start</button>
+                    <button class="btn btn-outline-light my-4 start_button" style="width:auto; float: right" onclick="location.href='./intro'">Start</button>
                 </div>
             </div>
 
@@ -49,7 +52,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href=''">Start</button>
+                    <button class="btn btn-outline-light my-4 start_button" style="width:auto; float: right" onclick="location.href=''">Start</button>
                 </div>
             </div>
 
@@ -61,12 +64,12 @@
                 </div>
 
                 <div class="col-md-3">
-                    <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href=''">Start</button>
+                    <button class="btn btn-outline-light my-4 start_button" style="width:auto; float: right" onclick="location.href=''">Start</button>
                 </div>
             </div>
             
            
-            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href=''">Marked</button>
+            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href=''">⭐ Marked</button>
             <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href='./quiz/1'">Mock Test</button>
             
         </div>
