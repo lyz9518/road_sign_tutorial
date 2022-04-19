@@ -2,19 +2,19 @@ quiz_data = [
   {
     "id": 144,
     "stem": "What does this sign mean?",
-    "A": "A side road ahead 前方有辅路",
-    "B": "A hospital ahead 前方有医院",
-    "C": "A railroad crossing ahead 前方有铁路道口",
-    "D": "A four-way intersection ahead/there is a crossroad ahead 前方有四通路口/前方有十字路口",
+    "A": "A side road ahead",
+    "B": "A hospital ahead",
+    "C": "A railroad crossing ahead",
+    "D": "A four-way intersection ahead/there is a crossroad ahead",
     "answer": "D",
     "image": "https://driving.liuls.us/images/questions/144.jpg"
   },
   {
     "id": 145,
     "stem": "What does this sign mean?",
-    "A": "You may not enter.不可进入",
-    "B": "Slow children at play.慢行, 儿童在游戏",
-    "C": "Do not stop or part.不可停车, 泊车",
+    "A": "You may not enter.",
+    "B": "Slow children at play.",
+    "C": "Do not stop or part.",
     "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/145.jpg"
@@ -22,9 +22,9 @@ quiz_data = [
   {
     "id": 146,
     "stem": "What does this sign mean?",
-    "A": "You may pass if safe.如果安全, 你可以超车",
-    "B": "You may pass if there are no cars coming.如无来车则可超车",
-    "C": "You may not pass at this part of the road.这段路不可超车",
+    "A": "You may pass if safe.",
+    "B": "You may pass if there are no cars coming.",
+    "C": "You may not pass at this part of the road.",
     "D": "",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/146.jpg"
@@ -32,9 +32,9 @@ quiz_data = [
   {
     "id": 147,
     "stem": "What does this sign mean?",
-    "A": "Keep right if you are driving slow 慢行请靠右",
-    "B": "Keep right if you are going to turn left.要左转请靠右",
-    "C": "Keep right if you are driving at the posted speed limit.限速行驶请靠右",
+    "A": "Keep right if you are driving slow",
+    "B": "Keep right if you are going to turn left.",
+    "C": "Keep right if you are driving at the posted speed limit.",
     "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/147.jpg"
@@ -42,9 +42,9 @@ quiz_data = [
   {
     "id": 148,
     "stem": "What does this sign mean?",
-    "A": "Keep to the right to turn left.保持右道做左转",
-    "B": "Slow traffic signals ahead.前方有减速标志",
-    "C": "You must turn left if in left lane 如在左道必须左转",
+    "A": "Keep to the right to turn left.",
+    "B": "Slow traffic signals ahead.",
+    "C": "You must turn left if in left lane",
     "D": "",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/148.jpg"
@@ -52,9 +52,9 @@ quiz_data = [
   {
     "id": 149,
     "stem": "What does this sign mean?",
-    "A": "Roadway is under construction ahead.前方修路",
-    "B": "Roadway ends ahead 前方路尽",
-    "C": "Speed limit is changing ahead.前方时速限制改变",
+    "A": "Roadway is under construction ahead.",
+    "B": "Roadway ends ahead",
+    "C": "Speed limit is changing ahead.",
     "D": "",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/149.jpg"
@@ -62,9 +62,9 @@ quiz_data = [
   {
     "id": 150,
     "stem": "What does this sign mean?",
-    "A": "Caution road slippery when wet.小心雨天路滑",
-    "B": "Caution two way traffic ahead.小心前方为双向车道",
-    "C": "Caution signals ahead.注意前方标志",
+    "A": "Caution road slippery when wet.",
+    "B": "Caution two way traffic ahead.",
+    "C": "Caution signals ahead.",
     "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/150.jpg"
@@ -72,9 +72,9 @@ quiz_data = [
   {
     "id": 151,
     "stem": "What does this sign mean?",
-    "A": "You must stop at all times.任何时候都必须停车",
-    "B": "Allow other cars, if near, to pass before driving ahead.先让邻近的车辆通过",
-    "C": "You are not allowed to make right turns.不可右转",
+    "A": "You must stop at all times.",
+    "B": "Allow other cars, if near, to pass before driving ahead.",
+    "C": "You are not allowed to make right turns.",
     "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/151.jpg"
@@ -82,9 +82,9 @@ quiz_data = [
   {
     "id": 152,
     "stem": "What does this sign mean?",
-    "A": "Caution other traffic entering road ahead.小心前方有其他车辆进入",
-    "B": "Caution divided highway ends.小心隔栏终止",
-    "C": "Caution narrow bridge ahead.小心前方有狭窄桥梁",
+    "A": "Caution other traffic entering road ahead.",
+    "B": "Caution divided highway ends.",
+    "C": "Caution narrow bridge ahead.",
     "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/152.jpg"
@@ -92,9 +92,9 @@ quiz_data = [
   {
     "id": 153,
     "stem": "What does this sign mean?",
-    "A": "Caution signal ahead.小心前方红绿灯",
-    "B": "Caution divided highway ends ahead.小心前方隔离栏终止",
-    "C": "Caution crossroad ahead.小心前方十字路口",
+    "A": "Caution signal ahead.",
+    "B": "Caution divided highway ends ahead.",
+    "C": "Caution crossroad ahead.",
     "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/153.jpg"
@@ -102,9 +102,9 @@ quiz_data = [
   {
     "id": 154,
     "stem": "What does this sign mean?",
-    "A": "You may expect cars coming toward you 前面是双向道",
-    "B": "You may expect no traffic ahead.前方无路可走",
-    "C": "You may expect signals ahead.前方会遇到红绿灯",
+    "A": "You may expect cars coming toward you",
+    "B": "You may expect no traffic ahead.",
+    "C": "You may expect signals ahead.",
     "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/154.jpg"
@@ -112,9 +112,9 @@ quiz_data = [
   {
     "id": 155,
     "stem": "What does this sign mean?",
-    "A": "Caution slow down ahead.小心前方减速",
-    "B": "Caution school ahead.小心前方有学校",
-    "C": "Caution stop ahead.小心前方有停车标志",
+    "A": "Caution slow down ahead.",
+    "B": "Caution school ahead.",
+    "C": "Caution stop ahead.",
     "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/155.jpg"
@@ -122,9 +122,9 @@ quiz_data = [
   {
     "id": 157,
     "stem": "What does this sign mean?",
-    "A": "You may not make left turns.不可左转",
-    "B": "You may not make right turns.不可右转",
-    "C": "You may not pass other traffic.不可超车",
+    "A": "You may not make left turns.",
+    "B": "You may not make right turns.",
+    "C": "You may not pass other traffic.",
     "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/157.jpg"
@@ -132,9 +132,9 @@ quiz_data = [
   {
     "id": 158,
     "stem": "What does this sign mean?",
-    "A": "Caution cross traffic ahead.注意前方十字路口",
-    "B": "Caution reduce speed ahead.前面请减速",
-    "C": "Caution men working ahead.小心前方有人干活",
+    "A": "Caution cross traffic ahead.",
+    "B": "Caution reduce speed ahead.",
+    "C": "Caution men working ahead.",
     "D": "",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/158.jpg"
@@ -142,9 +142,9 @@ quiz_data = [
   {
     "id": 159,
     "stem": "What does this sign mean?",
-    "A": "Caution narrow road ahead.小心前方道路狭窄",
-    "B": "Caution narrow bridge ahead.小心前方桥梁狭窄",
-    "C": "Caution bridge closed ahead.小心前方桥梁关闭",
+    "A": "Caution narrow road ahead.",
+    "B": "Caution narrow bridge ahead.",
+    "C": "Caution bridge closed ahead.",
     "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/159.jpg"
@@ -152,9 +152,9 @@ quiz_data = [
   {
     "id": 160,
     "stem": "What does this sign mean?",
-    "A": "Keep right no passing allowed.靠右行驶不能超车",
-    "B": "Keep right for left turn.左转请靠右行驶",
-    "C": "Keep right except to pass.除非超车, 否则必须靠右行驶",
+    "A": "Keep right no passing allowed.",
+    "B": "Keep right for left turn.",
+    "C": "Keep right except to pass.",
     "D": "",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/160.jpg"
@@ -162,9 +162,9 @@ quiz_data = [
   {
     "id": 161,
     "stem": "What does this sign mean?",
-    "A": "Caution school ahead.小心前方学校",
-    "B": "Caution hill ahead.小心前方山坡",
-    "C": "Caution curve ahead.小心前方弯道",
+    "A": "Caution school ahead.",
+    "B": "Caution hill ahead.",
+    "C": "Caution curve ahead.",
     "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/161.jpg"
@@ -172,8 +172,8 @@ quiz_data = [
   {
     "id": 162,
     "stem": "What does this sign mean?",
-    "A": "Caution, construction ahead 小心前方在施工",
-    "B": "Caution men working 小心前方有人干活",
+    "A": "Caution, construction ahead",
+    "B": "Caution men working",
     "C": "Caution stop sign ahead",
     "D": "",
     "answer": "C",
@@ -181,11 +181,11 @@ quiz_data = [
   },
   {
     "id": 164,
-    "stem": "The vertical rectangular traffic sign generally gives: 垂直长方形的交通标志一遍给出:",
-    "A": "Instructions to the driver 给驾驶员的指令",
-    "B": "Directions to the driver to stop 给驾驶员的停车指示",
-    "C": "A warning about the condition of the road 关于路况的警告",
-    "D": "A route number 道路编号",
+    "stem": "The vertical rectangular traffic sign generally gives:",
+    "A": "Instructions to the driver",
+    "B": "Directions to the driver to stop",
+    "C": "A warning about the condition of the road",
+    "D": "A route number",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/164.jpg"
   },
@@ -205,7 +205,7 @@ quiz_data = [
     "A": "Vehicles in both directions to pass",
     "B": "Vehicles from either direction to make a right turn",
     "C": "Vehicles from either direction to make a left turn",
-    "D": "None of the above 以上皆错",
+    "D": "None of the above",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/167.jpg"
   },
@@ -1211,7 +1211,7 @@ quiz_data = [
   },
   {
     "id": 284,
-    "stem": "What does this hand signal mean? 这个手势什么意思?",
+    "stem": "What does this hand signal mean?",
     "A": "The driver is going to make a left turn",
     "B": "The driver is going to make a U-turn",
     "C": "The driver is going to slow down or stop",
@@ -1221,7 +1221,7 @@ quiz_data = [
   },
   {
     "id": 285,
-    "stem": "What does this hand signal mean? 这个手势什么意思?",
+    "stem": "What does this hand signal mean?",
     "A": "The driver is going to make a left turn",
     "B": "The driver is going to make a U-turn",
     "C": "The driver is going to slow down or stop",
@@ -1231,7 +1231,7 @@ quiz_data = [
   },
   {
     "id": 286,
-    "stem": "What does this hand signal mean? 这个手势什么意思?",
+    "stem": "What does this hand signal mean?",
     "A": "The driver is going to make a left turn",
     "B": "The driver is going to make a U-turn",
     "C": "The driver is going to slow down or stop",
@@ -1242,20 +1242,20 @@ quiz_data = [
   {
     "id": 550,
     "stem": "What does this sign mean?",
-    "A": "The maximum speed limit is 50 mph 最高限速是 50 英里/小时",
-    "B": "The minimum speed limit is 50 mph 最低限速是 50 英里/小时",
-    "C": "The speed limit during the day is 50 mph 白天限速是 50 英里/小时",
-    "D": "The recommended speed limit is 50 mph 建议的限速是 50 英里/小时",
+    "A": "The maximum speed limit is 50 mph",
+    "B": "The minimum speed limit is 50 mph",
+    "C": "The speed limit during the day is 50 mph",
+    "D": "The recommended speed limit is 50 mph",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/550.jpg"
   },
   {
     "id": 557,
     "stem": "What does this sign mean?",
-    "A": "U-turn permitted 允许调头",
-    "B": "Wrong way, turn around and go back 错路, 调头回去",
-    "C": "Hairpin corner ahead 前方 U 字形转弯",
-    "D": "Steep crest or hump ahead 前方有陡峭的波峰或隆起",
+    "A": "U-turn permitted",
+    "B": "Wrong way, turn around and go back",
+    "C": "Hairpin corner ahead",
+    "D": "Steep crest or hump ahead",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/557.jpg"
   },
