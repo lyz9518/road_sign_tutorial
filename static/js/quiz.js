@@ -1,10 +1,4 @@
 
-function changeTitle(){
-	if(title == "")
-		return;
-	$(document).attr("title", title + " | " + $(document).attr("title"));
-}
-
 function timer(){
     let currentTime = new Date();
     let left = $("#timer").text().split(':')
@@ -55,10 +49,6 @@ function selectSingle(radio){
 	});
 
     goToQuestion(num + 1);
-}
-
-function goToQuestion(num){
-	redirect("/quiz/" + num);
 }
 
 function mark(){

@@ -50,19 +50,45 @@ body{
   padding-bottom: 20px;
 }
 
-.result-stem {
-  font-size: 25px;
-}
-
 .result-wrong {
   background-color: #D8000C;
+  font-weight: bold;
 }
 
 .result-correct {
   background-color: green;
+  font-weight: bold;
 }
 
-.result-sign {
-  width: 15%;
-  padding: 10px;
+#timer{
+    padding-top: 15px;
+    float: right;
+}
+.question-stem{
+    font-size: xx-large;
+    margin-top:10px;
+}
+.quiz-button{
+    width: 85px !important;
+    place-content: center;
+}
+.num-button{
+    display: inline;
+    place-content: center;
+}
+.question-image{
+    max-height: 200px;
+    float: right;
+    display:inline;
+    max-width:100%;
+}
+
+.two-options{
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.three-options{
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
 }

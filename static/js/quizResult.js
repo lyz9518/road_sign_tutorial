@@ -24,15 +24,20 @@ function displayQuestions(quiz_questions, user_answers){
   $.each(quiz_questions, function(index, value){
     console.log(index, value)
 
-    var question = $("<div class='questioin-padding'>")
-    var stem = $("<div class='text-light result-stem'>")
-    var options = $("<div>")
-    var option1 = $("<div class='text-light'>")
-    var option2 = $("<div class='text-light'>")
-    var option3 = $("<div class='text-light'>")
-    var option4 = $("<div class='text-light'>")
-    var selection = $("<div class='text-light result-wrong'>")
-    var sign = $("<img src='" + value["image"] + "' class='result-sign'>")
+    var question = $("<div class='mx-2 questioin-padding'>")
+    var stem = $("<p class='text-light my-3 question-stem'>")
+
+    var details = $("<div class='row'>")
+
+    var left = $("<div class='col-9'>")
+    var option1 = $("<p class='text-light lead'>")
+    var option2 = $("<p class='text-light lead'>")
+    var option3 = $("<p class='text-light lead'>")
+    var option4 = $("<p class='text-light lead'>")
+    var selection = $("<p class='text-light lead result-wrong'>")
+
+    var right = $("<div class='col-3'>")
+    var image = $("<img src='" + value["image"] + "' class='question-image'>")
 
     $(stem).append((index+1).toString() + ". ")
     $(stem).append(value["stem"])
@@ -42,10 +47,21 @@ function displayQuestions(quiz_questions, user_answers){
     $(option3).append("C. " + value["C"])
     $(option4).append("D. " + value["D"])
 
-    $(options).append(option1)
-    $(options).append(option2)
-    $(options).append(option3)
-    $(options).append(option4)
+    if(value["A"] != '')
+      $(left).append(option1)
+    if(value["B"] != '')
+      $(left).append(option2)
+    if(value["C"] != '')
+      $(left).append(option3)
+    if(value["D"] != '')
+      $(left).append(option4)
+    $(left).append(selection)
+
+    $(right).append(image)
+
+    $(details).append(left)
+    $(details).append(right)
+
 
     selected = user_answers[index]
     answer = value["answer"]
@@ -60,10 +76,19 @@ function displayQuestions(quiz_questions, user_answers){
       }
     }
 
+
+    if(value["D"] == '' && value["C"] == ''){
+      $(option1).addClass('two-options')
+      $(option2).addClass('two-options')
+    }
+    else if(value["D"] == ''){
+      $(option1).addClass('three-options')
+      $(option2).addClass('three-options')
+      $(option3).addClass('three-options')
+    }
+
     $(question).append(stem)
-    $(question).append(sign)
-    $(question).append(options)
-    $(question).append(selection)
+    $(question).append(details)
     $("#detail").append(question)
   });
 }
