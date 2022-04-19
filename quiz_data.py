@@ -15,7 +15,6 @@ quiz_data = [
     "A": "You may not enter.",
     "B": "Slow children at play.",
     "C": "Do not stop or part.",
-    "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/145.jpg"
   },
@@ -25,7 +24,6 @@ quiz_data = [
     "A": "You may pass if safe.",
     "B": "You may pass if there are no cars coming.",
     "C": "You may not pass at this part of the road.",
-    "D": "",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/146.jpg"
   },
@@ -35,7 +33,6 @@ quiz_data = [
     "A": "Keep right if you are driving slow",
     "B": "Keep right if you are going to turn left.",
     "C": "Keep right if you are driving at the posted speed limit.",
-    "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/147.jpg"
   },
@@ -45,7 +42,6 @@ quiz_data = [
     "A": "Keep to the right to turn left.",
     "B": "Slow traffic signals ahead.",
     "C": "You must turn left if in left lane",
-    "D": "",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/148.jpg"
   },
@@ -55,7 +51,6 @@ quiz_data = [
     "A": "Roadway is under construction ahead.",
     "B": "Roadway ends ahead",
     "C": "Speed limit is changing ahead.",
-    "D": "",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/149.jpg"
   },
@@ -65,7 +60,6 @@ quiz_data = [
     "A": "Caution road slippery when wet.",
     "B": "Caution two way traffic ahead.",
     "C": "Caution signals ahead.",
-    "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/150.jpg"
   },
@@ -75,7 +69,6 @@ quiz_data = [
     "A": "You must stop at all times.",
     "B": "Allow other cars, if near, to pass before driving ahead.",
     "C": "You are not allowed to make right turns.",
-    "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/151.jpg"
   },
@@ -85,7 +78,6 @@ quiz_data = [
     "A": "Caution other traffic entering road ahead.",
     "B": "Caution divided highway ends.",
     "C": "Caution narrow bridge ahead.",
-    "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/152.jpg"
   },
@@ -95,7 +87,6 @@ quiz_data = [
     "A": "Caution signal ahead.",
     "B": "Caution divided highway ends ahead.",
     "C": "Caution crossroad ahead.",
-    "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/153.jpg"
   },
@@ -105,7 +96,6 @@ quiz_data = [
     "A": "You may expect cars coming toward you",
     "B": "You may expect no traffic ahead.",
     "C": "You may expect signals ahead.",
-    "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/154.jpg"
   },
@@ -115,7 +105,6 @@ quiz_data = [
     "A": "Caution slow down ahead.",
     "B": "Caution school ahead.",
     "C": "Caution stop ahead.",
-    "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/155.jpg"
   },
@@ -125,7 +114,6 @@ quiz_data = [
     "A": "You may not make left turns.",
     "B": "You may not make right turns.",
     "C": "You may not pass other traffic.",
-    "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/157.jpg"
   },
@@ -135,7 +123,6 @@ quiz_data = [
     "A": "Caution cross traffic ahead.",
     "B": "Caution reduce speed ahead.",
     "C": "Caution men working ahead.",
-    "D": "",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/158.jpg"
   },
@@ -145,7 +132,6 @@ quiz_data = [
     "A": "Caution narrow road ahead.",
     "B": "Caution narrow bridge ahead.",
     "C": "Caution bridge closed ahead.",
-    "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/159.jpg"
   },
@@ -155,7 +141,6 @@ quiz_data = [
     "A": "Keep right no passing allowed.",
     "B": "Keep right for left turn.",
     "C": "Keep right except to pass.",
-    "D": "",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/160.jpg"
   },
@@ -165,7 +150,6 @@ quiz_data = [
     "A": "Caution school ahead.",
     "B": "Caution hill ahead.",
     "C": "Caution curve ahead.",
-    "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/161.jpg"
   },
@@ -175,7 +159,6 @@ quiz_data = [
     "A": "Caution, construction ahead",
     "B": "Caution men working",
     "C": "Caution stop sign ahead",
-    "D": "",
     "answer": "C",
     "image": "https://driving.liuls.us/images/questions/162.jpg"
   },
@@ -254,8 +237,6 @@ quiz_data = [
     "stem": "This is a 'blinkers only' road sign.",
     "A": "TRUE",
     "B": "FALSE",
-    "C": "",
-    "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/173.jpg"
   },
@@ -434,8 +415,6 @@ quiz_data = [
     "stem": "This is a 'u-turn only' road sign.",
     "A": "TRUE",
     "B": "FALSE",
-    "C": "",
-    "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/192.jpg"
   },
@@ -494,8 +473,6 @@ quiz_data = [
     "stem": "This is a 'police only' road sign.",
     "A": "TRUE",
     "B": "FALSE",
-    "C": "",
-    "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/199.jpg"
   },
@@ -974,8 +951,6 @@ quiz_data = [
     "stem": "This is a 'School zone' road sign.",
     "A": "TRUE",
     "B": "FALSE",
-    "C": "",
-    "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/256.jpg"
   },
@@ -1014,8 +989,6 @@ quiz_data = [
     "stem": "This is a 'Two-way Traffic' road sign.",
     "A": "TRUE",
     "B": "FALSE",
-    "C": "",
-    "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/260.jpg"
   },
@@ -1064,8 +1037,6 @@ quiz_data = [
     "stem": "This is a 'Nuclear Plant Ahead' road sign.",
     "A": "TRUE",
     "B": "FALSE",
-    "C": "",
-    "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/265.jpg"
   },
@@ -1104,8 +1075,6 @@ quiz_data = [
     "stem": "This is a 'No Phones Allowed' road sign.",
     "A": "TRUE",
     "B": "FALSE",
-    "C": "",
-    "D": "",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/271.jpg"
   },
@@ -1134,8 +1103,6 @@ quiz_data = [
     "stem": "This is a 'Rest Area' sign.",
     "A": "TRUE",
     "B": "FALSE",
-    "C": "",
-    "D": "",
     "answer": "A",
     "image": "https://driving.liuls.us/images/questions/274.jpg"
   },

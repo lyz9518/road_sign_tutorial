@@ -83,12 +83,12 @@ body{
     max-width:100%;
 }
 
-.two-options{
-  margin-top: 2rem;
-  margin-bottom: 2.5rem;
-}
-
 .three-options{
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
+}
+
+.two-options{
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
 }

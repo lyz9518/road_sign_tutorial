@@ -53,20 +53,20 @@
                 </p>
                 <div class="row">
                     <div class="col-9">
-                        <p class="text-light lead">
-                            <input type="radio" id="A" value="A" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='A'}}  {{'disabled' if question.A==''}}>
+                        <p class="text-light lead {{'three-options' if question.D==undefined}} {{'two-options' if question.D==undefined and question.C==undefined}}">
+                            <input type="radio" id="A" value="A" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='A'}}>
                             <label for="A"> A. {{question.A}}</label>
                         </p>
-                        <p class="text-light lead">
-                            <input type="radio" id="B" value="B" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='B'}} {{'disabled' if question.B==''}}>
+                        <p class="text-light lead {{'three-options' if question.D==undefined}} {{'two-options' if question.D==undefined and question.C==undefined}}">
+                            <input type="radio" id="B" value="B" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='B'}}>
                             <label for="B"> B. {{question.B}}</label>
                         </p>
-                        <p class="text-light lead">
-                            <input type="radio" id="C" value="C" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='C'}} {{'disabled' if question.C==''}}>
+                        <p class="text-light lead {{'three-options' if question.D==undefined}}" {{'hidden' if question.C==undefined}}>
+                            <input type="radio" id="C" value="C" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='C'}}>
                             <label for="C"> C. {{question.C}}</label>
                         </p>
-                        <p class="text-light lead">
-                            <input type="radio" id="D" value="D" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='D'}} {{'disabled' if question.D==''}}>
+                        <p class="text-light lead" {{'hidden' if question.D==undefined}}>
+                            <input type="radio" id="D" value="D" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='D'}}>
                             <label for="D"> D. {{question.D}}</label>
                         </p>
 
