@@ -1,0 +1,39 @@
+{% extends "ud-layout.html" %}
+
+{% block content %}
+<script src="{{url_for('static', filename='js/quizResult.js')}}"></script>
+
+<script>
+      let title = {{title|tojson}}
+      let quiz_questions = {{quiz_questions|tojson}}
+      let user_answers = {{user_answers|tojson}}
+</script>
+
+<style>
+      #content{
+          height: auto;
+          background: rgba(0,0,0,.5);
+          padding-left: 20px;
+          padding-right: 20px;
+          margin-bottom: 50px;
+      }
+
+      .question-stem{
+          font-size: xx-large;
+          margin-top:10px;
+      }
+</style>
+
+<div class="mx-10p">
+    <p card-text class="display-2 text-light mt-5"><b>Road Sign Quiz Result</b></p>
+    <div id="result">
+
+    </div>
+    <div id = "content">
+      <div id="detail">
+
+      </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -45,3 +45,19 @@ body{
 .content-width{
   width: fit-content;
 }
+
+.questioin-padding {
+  padding-bottom: 20px;
+}
+
+.result-stem {
+  font-size: 25px;
+}
+
+.result-wrong {
+  background-color: #D8000C;
+}
+
+.result-correct {
+  background-color: green;
+}

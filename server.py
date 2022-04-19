@@ -63,7 +63,7 @@ def quiz(num = None):
 
 @app.route('/quizresult')
 def quizresult():
-    return render_template('ud-quiz.html', title = 'Quiz', quiz_questions = quiz_questions, user_answers = user_answers)
+    return render_template('ud-quizResult.html', title = 'Quiz', quiz_questions = quiz_questions, user_answers = user_answers)
 
 
 @app.route('/mark', methods=['POST'])
@@ -71,7 +71,7 @@ def mark():
     global marked_questions
 
     json_data = request.get_json()
-    
+
     if json_data['operation'] == 'mark':
         marked_questions.append(int(json_data['num']))
     else:
