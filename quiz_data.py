@@ -920,16 +920,6 @@ quiz_data = [
     "image": "https://driving.liuls.us/images/questions/248.jpg"
   },
   {
-    "id": 249,
-    "stem": "This posted sign is:",
-    "A": "A night-time reflector",
-    "B": "A traffic light",
-    "C": "An interstate route marker",
-    "D": "A pedestrian crosswalks symbol",
-    "answer": "A",
-    "image": "https://driving.liuls.us/images/questions/249.jpg"
-  },
-  {
     "id": 251,
     "stem": "This sign indicates:",
     "A": "The end of a divided high way",
@@ -1208,36 +1198,6 @@ quiz_data = [
     "D": "Work zone markers",
     "answer": "B",
     "image": "https://driving.liuls.us/images/questions/283.jpg"
-  },
-  {
-    "id": 284,
-    "stem": "What does this hand signal mean?",
-    "A": "The driver is going to make a left turn",
-    "B": "The driver is going to make a U-turn",
-    "C": "The driver is going to slow down or stop",
-    "D": "The driver is going to make a right turn",
-    "answer": "C",
-    "image": "https://driving.liuls.us/images/questions/284.jpg"
-  },
-  {
-    "id": 285,
-    "stem": "What does this hand signal mean?",
-    "A": "The driver is going to make a left turn",
-    "B": "The driver is going to make a U-turn",
-    "C": "The driver is going to slow down or stop",
-    "D": "The driver is going to make a right turn",
-    "answer": "D",
-    "image": "https://driving.liuls.us/images/questions/285.jpg"
-  },
-  {
-    "id": 286,
-    "stem": "What does this hand signal mean?",
-    "A": "The driver is going to make a left turn",
-    "B": "The driver is going to make a U-turn",
-    "C": "The driver is going to slow down or stop",
-    "D": "The driver is going to make a right turn",
-    "answer": "A",
-    "image": "https://driving.liuls.us/images/questions/286.jpg"
   },
   {
     "id": 550,
