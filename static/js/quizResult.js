@@ -32,6 +32,7 @@ function displayQuestions(quiz_questions, user_answers){
     var option3 = $("<div class='text-light'>")
     var option4 = $("<div class='text-light'>")
     var selection = $("<div class='text-light result-wrong'>")
+    var sign = $("<img src='" + value["image"] + "' class='result-sign'>")
 
     $(stem).append((index+1).toString() + ". ")
     $(stem).append(value["stem"])
@@ -60,6 +61,7 @@ function displayQuestions(quiz_questions, user_answers){
     }
 
     $(question).append(stem)
+    $(question).append(sign)
     $(question).append(options)
     $(question).append(selection)
     $("#detail").append(question)

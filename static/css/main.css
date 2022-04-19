@@ -61,3 +61,8 @@ body{
 .result-correct {
   background-color: green;
 }
+
+.result-sign {
+  width: 15%;
+  padding: 10px;
+}
