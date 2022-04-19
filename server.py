@@ -96,7 +96,7 @@ def learn(num = None):
     except:
         return redirect("/learn/1", code=302)
 
-    if num < 2:
+    if num < 21:
         return render_template('ud-learn.html', info=data["regulatory"][num], num = num)
 
     return render_template('ud-learn.html', info=data["warning"][num], num = num)
