@@ -61,30 +61,35 @@ body{
 }
 
 #timer{
-    padding-top: 15px;
-    float: right;
+  padding-top: 15px;
+  float: right;
+  margin-right: 10px;
+}
+.marked-p{
+  float: right;
+  margin-right: 10px;
 }
 .question-stem{
-    font-size: xx-large;
-    margin-top:10px;
+  font-size: xx-large;
+  margin-top:10px;
 }
 .quiz-button{
-    width: 85px !important;
-    place-content: center;
+  width: 85px !important;
+  place-content: center;
 }
 .num-button{
-    display: inline;
-    place-content: center;
+  display: inline;
+  place-content: center;
 }
 .question-image{
-    max-height: 200px;
-    float: right;
-    display:inline;
-    max-width:100%;
+  max-height: 185px;
+  float: right;
+  display:inline;
+  max-width:100%;
 }
 
 .three-options{
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 

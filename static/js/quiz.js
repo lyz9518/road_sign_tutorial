@@ -47,8 +47,6 @@ function selectSingle(radio){
 			console.log(error)
 		}
 	});
-
-    goToQuestion(num + 1);
 }
 
 function mark(){
@@ -77,6 +75,13 @@ function mark(){
 			console.log(error)
 		}
 	});
+}
+
+function hint(){
+    if($("#hint").text() == '')
+    	$("#hint").text("Hint: Test Hint For Question " + num + ", To Be Inplemented.")
+    else
+    	$("#hint").text("")
 }
 
 function submit(){

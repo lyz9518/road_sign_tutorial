@@ -1,4 +1,5 @@
 {% extends "ud-layout.html" %}
+{% set menu =  "submit" %}
 
 {% block content %}
 
@@ -26,13 +27,22 @@
         }
         #content button{
             align-content: center;
-            width: 40px;
+           w Gidth: 40px;
             margin-top: 20px;
             display: inline-flex;
             margin-inline: 5px;
         }
         label{
             display: inline !important;
+        }
+        .radio-button { 
+            transform: scale(1.5);
+            margin-left: 2px;
+            margin-right: 5px;
+        }
+        #hint{
+            height: 24px;
+            color: #AAAAAA;
         }
 	</style>
 
@@ -43,46 +53,58 @@
                 {% for i in range(1, 11) %}
                     <button class="btn btn-outline-light num-button {{'btn-secondary' if user_answers[i - 1] != 'X'}}" onclick="goToQuestion({{i}})">{{'⭐' if (i) in marked_questions else (i)}}</button>
                 {% endfor %}
+                <h4 id="timer" class="text-light my-2">20:00</h4>
             </div>
-
-            <h4 id="timer" class="text-light my-2">20:00</h4>
 
             <div class="mx-2">
                 <p class="text-light my-3 question-stem">
                     {{num}}. {{question.stem}}
                 </p>
+
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-9 align-self-center">
                         <p class="text-light lead {{'three-options' if question.D==undefined}} {{'two-options' if question.D==undefined and question.C==undefined}}">
-                            <input type="radio" id="A" value="A" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='A'}}>
+                            <input class="radio-button" type="radio" id="A" value="A" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='A'}}>
                             <label for="A"> A. {{question.A}}</label>
                         </p>
                         <p class="text-light lead {{'three-options' if question.D==undefined}} {{'two-options' if question.D==undefined and question.C==undefined}}">
-                            <input type="radio" id="B" value="B" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='B'}}>
+                            <input class="radio-button" type="radio" id="B" value="B" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='B'}}>
                             <label for="B"> B. {{question.B}}</label>
                         </p>
                         <p class="text-light lead {{'three-options' if question.D==undefined}}" {{'hidden' if question.C==undefined}}>
-                            <input type="radio" id="C" value="C" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='C'}}>
+                            <input class="radio-button" type="radio" id="C" value="C" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='C'}}>
                             <label for="C"> C. {{question.C}}</label>
                         </p>
                         <p class="text-light lead" {{'hidden' if question.D==undefined}}>
-                            <input type="radio" id="D" value="D" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='D'}}>
+                            <input class="radio-button" type="radio" id="D" value="D" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='D'}}>
                             <label for="D"> D. {{question.D}}</label>
                         </p>
 
-                        <p><a class="text-light href bi-bookmark{{'-fill' if num in marked_questions}}" onclick="mark()"> &nbsp;{{'Not ' if num not in marked_questions}}Marked</a></p>
-
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-3 align-self-center">
                         <img class="question-image" src="{{question.image}}">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p id="hint" class="my-1"></p>
                     </div>
                 </div>
             </div>
 
-            <button class="btn btn-outline-light my-4 quiz-button" onclick="goToQuestion(num-1)" {{'disabled' if num==1}}>Previous</button>
-            <button class="btn btn-outline-light my-4 quiz-button" onclick="submit()" id="submitButton">Submit</button>
-            <button class="btn btn-outline-light my-4 quiz-button" onclick="goToQuestion(num+1)" {{'disabled' if num==10}}>Next</button>
+            <div class="row">
+                <div class="col-9">
+                    <button class="btn btn-outline-light my-4 quiz-button" onclick="goToQuestion(num-1)" {{'disabled' if num==1}}>Previous</button>
+                    <button class="btn btn-outline-light my-4 quiz-button" onclick="hint()" id="submitButton">Hint</button>
+                    <button class="btn btn-outline-light my-4 quiz-button" onclick="goToQuestion(num+1)" {{'disabled' if num==10}}>Next</button>
+                </div>
+                <div class="col-3 align-self-center">
+                    <p class="marked-p"><a class="text-light href bi-bookmark{{'-fill' if num in marked_questions}}" onclick="mark()"> &nbsp;{{'Not ' if num not in marked_questions}}Marked</a></p>
+                </div>
+            </div>
+
         </div>
     </div>
 	
