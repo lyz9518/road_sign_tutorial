@@ -8,10 +8,9 @@
 		console.log(title)
 	</script>
 
-    <div class="vertical-center text-align-center mx-10p">
-        <button type="button" class="btn btn-outline-light mt-2" onclick="learnPage()">Learn</button>
-        <button type="button" class="btn btn-outline-light mt-2" onclick="quizPage()">Quiz</button>
+    <div class="vertical-center text-center mx-10p">
+        <img class="href mode-image" src="{{url_for('static', filename='images/learn.png')}}" onclick="learnPage()">
+        <img class="href mode-image" src="{{url_for('static', filename='images/quiz.png')}}" onclick="quizPage()">
     </div>
-	
 
 {% endblock %}

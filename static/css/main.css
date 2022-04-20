@@ -102,3 +102,10 @@ body{
   margin-top: 2rem;
   margin-bottom: 2.5rem;
 }
+
+.mode-image{
+  width: 20%;
+  max-width: 250px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
