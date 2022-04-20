@@ -1,5 +1,10 @@
+@font-face {
+  font-family: candara;
+  src: url("../fonts/Candara.ttf");
+}
+
 body{
-  font-family: Candara;
+  font-family: candara;
 }
 
 #background {
