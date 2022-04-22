@@ -1,0 +1,63 @@
+{% extends "ud-layout.html" %}
+{% block content %}
+
+    <script src="{{url_for('static', filename='js/tutorialCollection.js')}}"></script>
+	<script>
+        let data = {{data|tojson}}
+	</script>
+
+    <style>
+        #collections{
+            position: relative;
+        }
+
+        #content{
+            height: auto;
+            overflow-y: auto;
+            background: rgba(0,0,0,.5);
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 50px;
+            padding-top: 10px;
+        }
+
+        #content button{
+            position: relative;
+            align-content: center;
+            width: 40px;
+            margin-top: 20px;
+            padding-top: 20px;
+            display: inline-flex;
+            margin-inline: 5px;
+        }
+        .sign-segment{
+            margin: 10px;
+        }
+
+        .sign-name-box{
+            position: absolute;
+            top: 25%;
+            margin: auto;
+            width: 80%;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .sign-name{
+            display: block;
+            margin: auto;
+            width: 100%;
+            color: white;
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+
+
+    <div class="collections mx-10p">
+        <p card-text class="display-2 text-light"><b>Marked Road Signs</b></p>
+        <div id="content"></div>
+    </div>
+
+{% endblock %}

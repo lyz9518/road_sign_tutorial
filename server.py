@@ -15,7 +15,7 @@ marked_questions = []
 
 # data
 data = tutorial_data.tutorial
-
+tutorial_collection_id = [1,2,3,4,5,6,7,8,9,15] # TODO: test purpose for now change it back to empty later
 # ROUTES
 
 @app.route('/')
@@ -101,6 +101,20 @@ def learn(num = None):
 
     return render_template('ud-learn.html', info=data["warning"][num], num = num)
 
+@app.route('/learn/tutorialCollection')
+def tutorial_collection():
+    '''
+        Route for tutorial collection page.
+        Data entries are supposed to stored as int value represent the sign id.
+    '''
+    marked = []
+    for id in tutorial_collection_id:
+        if id<=20: # regulatory signs
+            marked.append(data["regulatory"][id])
+        else:   # warning signs
+            marked.append(data["warning"][id])
+
+    return render_template('ud-tutorialCollection.html', data=marked)
 
 # Binding
 if __name__ == '__main__':
