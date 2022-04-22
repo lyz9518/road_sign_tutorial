@@ -15,7 +15,7 @@ marked_questions = []
 
 # data
 data = tutorial_data.tutorial
-tutorial_collection_id = [1,2,3,4,5,6,7,8,9,15] # TODO: test purpose for now change it back to empty later
+tutorial_collection_id = [1,2,3,40,45,23] # TODO: test purpose for now change it back to empty later
 # ROUTES
 
 @app.route('/')
