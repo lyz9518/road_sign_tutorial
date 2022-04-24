@@ -5,6 +5,8 @@ from quiz_data import *
 import uuid
 import random
 import tutorial_data
+import time
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -12,6 +14,7 @@ app = Flask(__name__)
 quiz_questions = []
 user_answers = ['X'] * 10
 marked_questions = []
+end_time = 0.0
 
 # data
 data = tutorial_data.tutorial
@@ -39,9 +42,12 @@ def generateQuiz(id = None):
     global quiz_questions
     global user_answers
     global marked_questions
+    global end_time
+
     quiz_questions = random.sample(quiz_data, 10)
     user_answers = ['X'] * 10
     marked_questions = []
+    end_time = time.time() + 20 * 60
 
     return redirect("/quiz/1", code=302)
 
@@ -58,7 +64,7 @@ def quiz(num = None):
     if num < 1 or num > 10:
         return redirect("/quiz/1", code=302)
 
-    return render_template('ud-quiz.html', title = 'Quiz', num = num, question = quiz_questions[num - 1], user_answers = user_answers, marked_questions = marked_questions)
+    return render_template('ud-quiz.html', title = 'Quiz', num = num, question = quiz_questions[num - 1], user_answers = user_answers, marked_questions = marked_questions, end_time = end_time)
 
 
 @app.route('/quizresult')

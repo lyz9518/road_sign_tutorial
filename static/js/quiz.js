@@ -1,15 +1,30 @@
 
 function timer(){
-    let currentTime = new Date();
-    let left = $("#timer").text().split(':')
-    let seconds = parseInt(left[0] * 60) + parseInt(left[1])
-    
-    seconds --
-    let new_time = String(parseInt(seconds / 60)).padStart(2, '0') + ':' + String((seconds % 60)).padStart(2, '0')
+    let time_left = Math.round(end_time - Date.now() / 1000);
+    let minute = parseInt(time_left / 60)
+    let second = time_left % 60
+    let new_time = String(minute).padStart(2, '0') + ':' + String(second).padStart(2, '0')
     $("#timer").text(new_time)
 
-	setTimeout(timer, 1000, 0);
+    if(minute < 1 && second < 1){
+    	setTimeout(submit, 10, false)
+    	return
+    }
+
+    let current_time = Date.now() / 1000
+    let A = parseInt((end_time - parseInt(end_time)) * 1000)
+    let B = parseInt((current_time - parseInt(current_time)) * 1000)
+    
+   	if(A > B){
+		setTimeout(timer, A - B, 0);
+   	}else if (A == B){
+		setTimeout(timer, 1000, 0);
+   	}else{
+		setTimeout(timer, A + 1000 - B, 0);
+   	}
+
 }
+
 
 function clearOptions(){
     $("#A").prop("checked", false);
@@ -84,9 +99,12 @@ function hint(){
     	$("#hint").text("")
 }
 
-function submit(){
+function submit(confirm = true){
     if(user_answers.includes('X')){
-        if (window.confirm("You have not finished all the questions. Really?")) {
+    	if(!confirm){
+    		alert("Time up. Your quiz will be sumitted.")
+            redirect('/quizresult');
+    	}else if(window.confirm("You have not finished all the questions. Really?")) {
             redirect('/quizresult');
         }
     }else{
@@ -96,5 +114,5 @@ function submit(){
 
 $(document).ready(function(){
 	changeTitle()
-	setTimeout(timer, 1000, 0);
+	timer()
 });
