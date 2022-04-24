@@ -13,6 +13,37 @@
             var popup = document.getElementById("myPopup");
             popup.classList.toggle("show");
         }
+
+        $(document).ready(function(){
+            let prev_num = num - 1
+            next_num = num + 1
+            if (prev_num == 20) {
+                prev_num = 18
+            }
+
+            if (next_num == 19){
+                next_num = 21
+            }
+
+            prev_link = "../learn/" + prev_num.toString()
+            next_link = "../learn/" + next_num.toString() 
+
+            if (num == 1) {
+                prev_link = "../intro"
+            }
+            else if (num == 45) {
+                next_link = "../quiz/1"       
+            }
+            
+            $(".prev").on("click", function() {
+                window.location.href = prev_link
+            });
+
+            $(".next").on("click", function() {
+                window.location.href = next_link
+            });
+
+        });
     </script>
 
     <style>
@@ -122,11 +153,11 @@
             </div>
 
             
-            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href='../intro'">Previous</button>
+            <button class="btn btn-outline-light my-4 prev" style="width:auto">Previous</button>
             <div class="btn btn-outline-light my-4 popup" style="width:auto" onclick="popUp()">Hint
                 <span class="popuptext" id="myPopup">{{info.hint}}</span>
             </div>
-            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href='../learn/21'">Next</button>            
+            <button class="btn btn-outline-light my-4 next" style="width:auto">Next</button>            
         </div>
     </div>
 	
