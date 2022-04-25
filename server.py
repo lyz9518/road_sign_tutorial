@@ -102,10 +102,30 @@ def learn(num = None):
     except:
         return redirect("/learn/1", code=302)
 
-    if num < 21:
-        return render_template('ud-learn.html', info=data["regulatory"][num], num = num)
+    marked = False
+    if num in tutorial_collection_id:
+        marked = True
 
-    return render_template('ud-learn.html', info=data["warning"][num], num = num)
+    if num < 21:
+        return render_template('ud-learn.html', info=data["regulatory"][num], num = num, marked=marked)
+
+    return render_template('ud-learn.html', info=data["warning"][num], num = num, marked=marked)
+
+@app.route('/mark_learn', methods=['GET', 'POST'])
+def mark_learn():
+    global tutorial_collection_id
+    mark_id= request.get_json()
+    mark = True
+
+    if mark_id not in tutorial_collection_id:
+        tutorial_collection_id.append(mark_id)
+    else:
+        tutorial_collection_id.remove(mark_id)
+        mark = False
+    
+    print(tutorial_collection_id)
+
+    return jsonify(mark=mark)
 
 @app.route('/learn/tutorialCollection')
 def tutorial_collection():
@@ -119,6 +139,8 @@ def tutorial_collection():
             marked.append(data["regulatory"][id])
         else:   # warning signs
             marked.append(data["warning"][id])
+
+    print("Marked:", [i['id'] for i in marked])
 
     return render_template('ud-tutorialCollection.html', data=marked)
 

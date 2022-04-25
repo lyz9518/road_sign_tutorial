@@ -3,50 +3,13 @@
 
 {% block content %}
     <script src="{{url_for('static', filename='js/learn.js')}}"></script>
+
     <script>
         let info = {{info|tojson}}
         let num = {{num|tojson}}
+        let marked = {{marked|tojson}}
         console.log(num)
         console.log(info)
-
-        function popUp() {
-            var popup = document.getElementById("myPopup");
-            popup.classList.toggle("show");
-        }
-
-        $(document).ready(function(){
-            let img_path = "../static/images/road_sign_img/" + num.toString() + ".png"
-            $("#sign_img").attr("src", img_path)
-
-            let prev_num = num - 1
-            next_num = num + 1
-            if (prev_num == 20) {
-                prev_num = 18
-            }
-
-            if (next_num == 19){
-                next_num = 21
-            }
-
-            prev_link = "../learn/" + prev_num.toString()
-            next_link = "../learn/" + next_num.toString() 
-
-            if (num == 1) {
-                prev_link = "../intro"
-            }
-            else if (num == 45) {
-                next_link = "../quiz/1"       
-            }
-            
-            $(".prev").on("click", function() {
-                window.location.href = prev_link
-            });
-
-            $(".next").on("click", function() {
-                window.location.href = next_link
-            });
-
-        });
     </script>
 
     <style>
@@ -170,6 +133,7 @@
             <div class="btn btn-outline-light my-4 popup" style="width:auto" onclick="popUp()">Hint
                 <span class="popuptext" id="myPopup">{{info.hint}}</span>
             </div>
+            <button class="btn btn-outline-light my-4 mark" style="width:auto">Mark</button>
             <button class="btn btn-outline-light my-4 next" style="width:auto">Next</button>            
         </div>
     </div>
