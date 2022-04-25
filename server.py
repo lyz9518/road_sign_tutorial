@@ -122,8 +122,6 @@ def mark_learn():
     else:
         tutorial_collection_id.remove(mark_id)
         mark = False
-    
-    print(tutorial_collection_id)
 
     return jsonify(mark=mark)
 
@@ -139,8 +137,6 @@ def tutorial_collection():
             marked.append(data["regulatory"][id])
         else:   # warning signs
             marked.append(data["warning"][id])
-
-    print("Marked:", [i['id'] for i in marked])
 
     return render_template('ud-tutorialCollection.html', data=marked)
 
