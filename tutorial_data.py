@@ -180,7 +180,7 @@ tutorial = {
         },
         25:{
             "id": 25,
-            "name": "SET OF CURVES SIGN",
+            "name": "SET OF CURVES SIGN (LEFT)",
             "image_link": "",
             "hint": "Smooth arrow=curve",
             "description": "The road ahead curves first in one direction and then back in the other direction (a set of two curves). Slow down and prepare to navigate through the set of curves.",
@@ -188,10 +188,10 @@ tutorial = {
         },
         26:{
             "id": 26,
-            "name": "",
+            "name": "SET OF CURVES (RIGHT)",
             "image_link": "",
             "hint": "",
-            "description": "",
+            "description": "The road ahead curves first in one direction and then back in the other direction (a set of two curves). Slow down and prepare to navigate through the set of curves",
             "category": "Warning Sign"
         },
         27:{
