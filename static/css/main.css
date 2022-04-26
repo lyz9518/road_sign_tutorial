@@ -65,6 +65,15 @@ body{
   font-weight: bold;
 }
 
+.margin-left {
+  margin-left: 40px;
+}
+
+.result-text {
+  font-weight: bold;
+  background: black;
+}
+
 #timer{
   padding-top: 15px;
   float: right;
