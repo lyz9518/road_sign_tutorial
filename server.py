@@ -18,7 +18,7 @@ end_time = 0.0
 
 # data
 data = tutorial_data.tutorial
-tutorial_collection_id = [1,2,3,40,45,23] # TODO: test purpose for now change it back to empty later
+tutorial_collection_id = [] 
 # ROUTES
 
 @app.route('/')
