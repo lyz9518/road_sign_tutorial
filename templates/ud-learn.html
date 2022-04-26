@@ -10,6 +10,7 @@
         let marked = {{marked|tojson}}
         console.log(num)
         console.log(info)
+        console.log(marked)
     </script>
 
     <style>
@@ -117,24 +118,31 @@
             </div>
 
             <div class="row">
-                <div class="col-md-7">
-                    <p class="text-light lead text1">
+                <div class="col-9 align-self-center">
+                    <p class="text-light lead">
                         {{info.description}}
                     </p>
                 </div>
-                
-                <div class="col-md-4">
-                    <img id="sign_img" src={{img_path}}>
+
+                <div class="col-3 align-self-center">
+                    <img class="question-image" src="{{url_for('static', filename='images/road_sign_img/' + num|string + '.png')}}">
                 </div>
             </div>
 
-            
-            <button class="btn btn-outline-light my-4 prev" style="width:auto">Previous</button>
-            <div class="btn btn-outline-light my-4 popup" style="width:auto" onclick="popUp()">Hint
-                <span class="popuptext" id="myPopup">{{info.hint}}</span>
+
+
+            <div class="row">
+                <div class="col-9">
+                    <button class="btn btn-outline-light my-4 quiz-button" id="prev">Previous</button>
+                    <div class="btn btn-outline-light my-4 quiz-button popup" onclick="popUp()">
+                        Hint
+                        <span class="popuptext" id="myPopup">{{info.hint}}</span></div>
+                    <button class="btn btn-outline-light my-4 quiz-button" id="next">Next</button>
+                </div>
+                <div class="col-3 align-self-center">
+                    <p class="marked-p"><a class="text-light href bi-bookmark{{'-fill' if marked}}" id="mark"> &nbsp;{{'Not ' if not marked}}Marked</a></p>
+                </div>
             </div>
-            <button class="btn btn-outline-light my-4 mark" style="width:auto">Mark</button>
-            <button class="btn btn-outline-light my-4 next" style="width:auto">Next</button>            
         </div>
     </div>
 	

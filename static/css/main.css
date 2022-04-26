@@ -82,6 +82,7 @@ body{
 .marked-p{
   float: right;
   margin-right: 10px;
+  margin-bottom: 0;
 }
 .question-stem{
   font-size: xx-large;

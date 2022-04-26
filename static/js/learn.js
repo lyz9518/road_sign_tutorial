@@ -28,20 +28,20 @@ $(document).ready(function(){
         next_link = "../quiz/1"       
     }
 
-    if (marked) {
-        $(".mark").html("Marked")
-        // $(".mark").get(0).style.setProperty("--border-color", "antiquewhite")
-    }
+    // if (marked) {
+    //     $("#mark").html("Marked")
+    //     // $(".mark").get(0).style.setProperty("--border-color", "antiquewhite")
+    // }
     
-    $(".prev").on("click", function() {
+    $("#prev").on("click", function() {
         window.location.href = prev_link
     });
 
-    $(".next").on("click", function() {
+    $("#next").on("click", function() {
         window.location.href = next_link
     });
 
-    $(".mark").on("click", function() {
+    $("#mark").on("click", function() {
         $.ajax({
             type: "POST",
             url: "../mark_learn",
@@ -49,14 +49,14 @@ $(document).ready(function(){
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(num),
             success: function (response) {
-                var mark = response["mark"]
-                if (mark){
-                    $(".mark").html("Marked")
-                }
-                else {
-                    $(".mark").html("Mark")
-                }
-                
+                // var mark = response["mark"]
+                // if (mark){
+                //     $("#mark").html("Marked")
+                // }
+                // else {
+                //     $("#mark").html("Not Marked")
+                // }
+                refresh()
             },
             error: function(request, status, error){
                 console.log("Error");
