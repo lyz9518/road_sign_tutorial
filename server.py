@@ -47,7 +47,7 @@ def generateQuiz(id = None):
     quiz_questions = random.sample(quiz_data, 10)
     user_answers = ['X'] * 10
     marked_questions = []
-    end_time = time.time() + 20 * 60
+    end_time = time.time() + 10 * 60
 
     return redirect("/quiz/1", code=302)
 
