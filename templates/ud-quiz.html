@@ -68,19 +68,19 @@
                     <div class="col-9 align-self-center">
                         <p class="text-light lead {{'three-options' if question.D==undefined}} {{'two-options' if question.D==undefined and question.C==undefined}}">
                             <input class="radio-button" type="radio" id="A" value="A" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='A'}}>
-                            <label for="A"> A. {{question.A}}</label>
+                            <label for="A"> {{question.A}}</label>
                         </p>
                         <p class="text-light lead {{'three-options' if question.D==undefined}} {{'two-options' if question.D==undefined and question.C==undefined}}">
                             <input class="radio-button" type="radio" id="B" value="B" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='B'}}>
-                            <label for="B"> B. {{question.B}}</label>
+                            <label for="B"> {{question.B}}</label>
                         </p>
                         <p class="text-light lead {{'three-options' if question.D==undefined}}" {{'hidden' if question.C==undefined}}>
                             <input class="radio-button" type="radio" id="C" value="C" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='C'}}>
-                            <label for="C"> C. {{question.C}}</label>
+                            <label for="C"> {{question.C}}</label>
                         </p>
                         <p class="text-light lead" {{'hidden' if question.D==undefined}}>
                             <input class="radio-button" type="radio" id="D" value="D" onchange="selectSingle(this)" {{'checked' if user_answers[num - 1]=='D'}}>
-                            <label for="D"> D. {{question.D}}</label>
+                            <label for="D"> {{question.D}}</label>
                         </p>
 
                     </div>
