@@ -37,7 +37,7 @@ function displayQuestions(quiz_questions, user_answers){
     var selection = $("<p class='text-light result-text lead margin-left'>")
 
     var right = $("<div class='col-3'>")
-    var image = $("<img src='" + value["image"] + "' class='question-image'>")
+    var image = $("<img src='" + 'static/images/road_sign_img/' + value["id"] + '.png' + "' class='question-image'>")
 
     selected = user_answers[index]
     answer = value["answer"]
