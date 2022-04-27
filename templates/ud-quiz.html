@@ -1,5 +1,4 @@
 {% extends "ud-layout.html" %}
-{% set menu =  "submit" %}
 
 {% block content %}
 
@@ -50,19 +49,32 @@
 	</style>
 
     <div class="vertical-center mx-10p">
-        <p card-text class="display-2 text-light mt-5"><b>Road Sign Quiz</b></p>
-        <div id = "content">
+        <div class="row mt-5">
+            <div class="col-9 align-self-center">
+                <p card-text class="display-2 text-light"><b>Road Sign Quiz</b></p>
+            </div>
+            <div class="col-3 align-self-center">
+                <h2 id="timer" class="text-light"></h2>
+            </div>
+        </div>
+        <div id="content">
             <div id="question_nums">
                 {% for i in range(1, 11) %}
                     <button class="{{'mark-icon' if (i) in marked_questions}} btn btn-outline-light num-button {{'btn-secondary' if user_answers[i - 1] != 'X'}} " onclick="goToQuestion({{i}})">{{'' if (i) in marked_questions else (i)}}</button>
                 {% endfor %}
-                <h4 id="timer" class="text-light my-2"></h4>
+                <button class="btn btn-outline-light quiz-button float-right" onclick="submit()" id="submitButton">Submit</button>
             </div>
 
             <div class="mx-2">
-                <p class="text-light my-3 question-stem">
-                    {{num}}. {{question.stem}}
-                </p>
+                <div class="row">
+                    <div class="col-9 align-self-center">
+                        <p class="text-light my-3 question-stem">
+                            {{num}}. {{question.stem}}
+                        </p>
+                    </div>
+                    <div class="col-3 align-self-center">
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-9 align-self-center">
