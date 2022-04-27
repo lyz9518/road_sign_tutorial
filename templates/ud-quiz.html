@@ -54,7 +54,7 @@
         <div id = "content">
             <div id="question_nums">
                 {% for i in range(1, 11) %}
-                    <button class="btn btn-outline-light num-button {{'btn-secondary' if user_answers[i - 1] != 'X'}}" onclick="goToQuestion({{i}})">{{'⭐' if (i) in marked_questions else (i)}}</button>
+                    <button class="{{'mark-icon' if (i) in marked_questions}} btn btn-outline-light num-button {{'btn-secondary' if user_answers[i - 1] != 'X'}} " onclick="goToQuestion({{i}})">{{'' if (i) in marked_questions else (i)}}</button>
                 {% endfor %}
                 <h4 id="timer" class="text-light my-2"></h4>
             </div>

@@ -96,6 +96,13 @@ body{
   display: inline;
   place-content: center;
 }
+.select-button{
+  width: 110px !important;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px !important;
+  margin-right: 50px !important;
+}
 .question-image{
   max-height: 185px;
   float: right;
@@ -127,4 +134,12 @@ body{
   -ms-transform: scale(1.1);
   transform: scale(1.1);
   transition: ease 1s;
+}
+
+.mark-icon{
+  font-family: bootstrap-icons !important;
+}
+
+.mark-icon::before{
+  content:  "\f199";
 }
