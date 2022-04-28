@@ -18,7 +18,15 @@ end_time = 0.0
 
 # data
 data = tutorial_data.tutorial
-tutorial_collection_id = [] 
+tutorial_collection_id = []
+intro_progress = set([1])
+regular_progress = set([2,3])
+warn_progress = set([4,5])
+
+intro_total = 1.0
+regular_total = 18.0
+warn_total = 25.0
+
 # ROUTES
 
 @app.route('/')
@@ -31,7 +39,14 @@ def mode():
 
 @app.route('/selectChapter')
 def select():
-    return render_template('ud-selectChapter.html')
+    global intro_progress
+    global regular_progress
+    global warn_progress
+
+    intro = int(len(intro_progress)/intro_total * 100)
+    regular = int(len(regular_progress)/regular_total * 100)
+    warn = int(len(warn_progress)/warn_total * 100)
+    return render_template('ud-selectChapter.html', intro=intro, regular=regular, warn=warn)
 
 @app.route('/intro')
 def intro():
@@ -47,7 +62,7 @@ def generateQuiz(id = None):
     quiz_questions = random.sample(quiz_data, 10)
     user_answers = ['X'] * 10
     marked_questions = []
-    end_time = time.time() + 10 * 60
+    end_time = time.time() + 20 * 60
 
     return redirect("/quiz/1", code=302)
 
