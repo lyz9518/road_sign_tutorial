@@ -2,6 +2,7 @@
 {% set menu =  "back" %}
 
 {% block content %}
+    <script src="{{url_for('static', filename='js/intro.js')}}"></script>
 
     <style>
         #content{
@@ -41,7 +42,7 @@
             </p>
             
            
-            <button class="btn btn-outline-light my-4" style="width:auto" onclick="location.href='./learn/1'">Next</button>
+            <button class="btn btn-outline-light my-4" id="next" style="width:auto" onclick="location.href='./learn/1'">Next</button>
             
         </div>
     </div>

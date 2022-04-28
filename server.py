@@ -19,9 +19,9 @@ end_time = 0.0
 # data
 data = tutorial_data.tutorial
 tutorial_collection_id = []
-intro_progress = set([1])
-regular_progress = set([2,3])
-warn_progress = set([4,5])
+intro_progress = 0
+regular_progress = set()
+warn_progress = set()
 
 intro_total = 1.0
 regular_total = 18.0
@@ -43,7 +43,8 @@ def select():
     global regular_progress
     global warn_progress
 
-    intro = int(len(intro_progress)/intro_total * 100)
+    print(intro_progress)
+    intro = 100 if intro_progress else 0
     regular = int(len(regular_progress)/regular_total * 100)
     warn = int(len(warn_progress)/warn_total * 100)
     return render_template('ud-selectChapter.html', intro=intro, regular=regular, warn=warn)
@@ -139,6 +140,31 @@ def mark_learn():
         mark = False
 
     return jsonify(mark=mark)
+
+@app.route('/complete_learn', methods=['POST'])
+def complete_learn():
+    global regular_progress
+    global warn_progress
+
+    id = request.get_json()
+    
+    if id > 20:
+        warn_progress.add(id)
+    else:
+        regular_progress.add(id)
+
+    return "success"
+
+@app.route('/complete_intro', methods=['POST'])
+def complete_intro():
+    global intro_progress
+
+    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+    complete = request.get_json()
+    intro_progress = complete
+
+    return "success"
 
 @app.route('/learn/tutorialCollection')
 def tutorial_collection():

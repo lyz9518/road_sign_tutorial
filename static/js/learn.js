@@ -38,6 +38,22 @@ $(document).ready(function(){
     });
 
     $("#next").on("click", function() {
+        $.ajax({
+            type: "POST",
+            url: "../complete_learn",
+            dataType : "json",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(num),
+            success: function (response) {
+                // refresh()
+            },
+            error: function(request, status, error){
+                console.log("Error");
+                console.log(request)
+                console.log(status)
+                console.log(error)
+            }
+        });
         window.location.href = next_link
     });
 
