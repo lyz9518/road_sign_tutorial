@@ -43,7 +43,6 @@ def select():
     global regular_progress
     global warn_progress
 
-    print(intro_progress)
     intro = 100 if intro_progress else 0
     regular = int(len(regular_progress)/regular_total * 100)
     warn = int(len(warn_progress)/warn_total * 100)
@@ -158,8 +157,6 @@ def complete_learn():
 @app.route('/complete_intro', methods=['POST'])
 def complete_intro():
     global intro_progress
-
-    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
     complete = request.get_json()
     intro_progress = complete
