@@ -56,12 +56,12 @@ body{
 }
 
 .result-wrong {
-  background-color: #D8000C;
+  color: red;
   font-weight: bold;
 }
 
 .result-correct {
-  background-color: green;
+  color: #00ba37;
   font-weight: bold;
 }
 
