@@ -10,7 +10,7 @@ function displayResult(quiz_questions, user_answers){
     }
   });
   $(result).append("Score: " + score + "/100.")
-  if(score < 60){
+  if(score < 80){
     $(result).append(" You did not pass this quiz!")
   }
   else{
