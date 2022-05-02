@@ -12,6 +12,9 @@
             width: 100%;
             height: fit-content;
         }
+        .nav-button{
+            background-color: lightgray;
+        }
     </style>
     <link rel="icon" href="{{url_for('static', filename='images/icon.png')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -47,11 +50,11 @@
             <div class="col">
                 {% if menu == "submit" %}
                     <ul class="mb-0 d-flex justify-content-end">
-                        <button type="button" class="btn btn-outline-secondary my-sm-0 px-3" onclick="submit()">Submit</button>
+                        <button type="button" class="btn btn-outline-secondary my-sm-0 px-3 nav-button" onclick="submit()">Submit</button>
                     </ul>
                 {% elif menu == "back" %}
                     <ul class="mb-0 d-flex justify-content-end">
-                        <button type="button" class="btn btn-outline-secondary my-sm-0" onclick="learnPage()">Back to Menu</button>
+                        <button type="button" class="btn btn-outline-secondary my-sm-0 nav-button" onclick="learnPage()">Back to Menu</button>
                     </ul>
                 {% else %}
             
