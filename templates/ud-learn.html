@@ -134,7 +134,7 @@
                     <div class="btn btn-outline-light my-4 quiz-button popup" onclick="popUp()">
                         Hint
                         <span class="popuptext" id="myPopup">{{info.hint}}</span></div>
-                    <button class="btn btn-outline-light my-4 quiz-button" id="next">Next</button>
+                    <button class="btn btn-outline-light my-4 quiz-button" id="next" {{"disabled" if num == 45}}>Next</button>
                 </div>
                 <div class="col-3 align-self-center">
                     <p class="marked-p"><a class="text-light href bi-bookmark{{'-fill' if marked}}" id="mark"> &nbsp;{{'Not ' if not marked}}Marked</a></p>

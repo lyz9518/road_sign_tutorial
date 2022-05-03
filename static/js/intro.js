@@ -9,7 +9,6 @@ $(document).ready(function(){
             data: JSON.stringify(complete),
             success: function (response) {
                 // refresh()
-                console.log(response)
             },
             error: function(request, status, error){
                 console.log("Error");
@@ -20,7 +19,6 @@ $(document).ready(function(){
         });
         let next_link = "./learn/1"
         setTimeout("window.location.href= '"+next_link+"'",500);
-        console.log("delay for fixing safari bug")
     });
 
 });

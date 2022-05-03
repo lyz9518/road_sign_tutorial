@@ -56,7 +56,6 @@ $(document).ready(function(){
         });
         
         setTimeout("window.location.href= '"+next_link+"'",300);
-        console.log("delay for fixing safari bug")
          
     });
 

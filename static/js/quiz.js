@@ -50,7 +50,6 @@ function selectSingle(radio){
 		contentType: "application/json; charset=utf-8",
 		data : JSON.stringify(request_data),
 		success: function(result){
-			console.log('success', result)
 			if(result.status == 200){
 				goToQuestion(num + 1)
 			}
@@ -78,7 +77,6 @@ function mark(){
 		contentType: "application/json; charset=utf-8",
 		data : JSON.stringify(request_data),
 		success: function(result){
-			console.log('success', result)
 			if(result.status == 200){
 				goToQuestion(num)
 			}
