@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, make_response
 from flask import Response, request, jsonify, redirect
 from quiz_data import *
 import uuid
@@ -153,16 +153,16 @@ def complete_learn():
     else:
         regular_progress.add(id)
 
-    return "success"
+    return make_response(jsonify(message = "success"),200)
 
-@app.route('/complete_intro', methods=['POST'])
+@app.route('/complete_intro', methods=['GET','POST'])
 def complete_intro():
     global intro_progress
 
     complete = request.get_json()
     intro_progress = complete
 
-    return "success"
+    return make_response(jsonify(message = "success"),200)
 
 @app.route('/learn/tutorialCollection')
 def tutorial_collection():

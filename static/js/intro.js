@@ -9,6 +9,7 @@ $(document).ready(function(){
             data: JSON.stringify(complete),
             success: function (response) {
                 // refresh()
+                console.log(response)
             },
             error: function(request, status, error){
                 console.log("Error");
