@@ -31,7 +31,9 @@ function changeTitle(){
 
 
 function goToQuestion(num){
-	if(num > 10)
+	if(num > 10){
+		refresh()
 		return
+	}
 	redirect("/quiz/" + num);
 }
