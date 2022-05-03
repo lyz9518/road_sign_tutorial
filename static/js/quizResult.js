@@ -10,7 +10,7 @@ function displayResult(quiz_questions, user_answers){
     }
   });
   $(result).append("Score: " + score + "/100.")
-  if(score < 60){
+  if(score < 80){
     $(result).append(" You did not pass this quiz!")
   }
   else{
@@ -55,9 +55,11 @@ function displayQuestions(quiz_questions, user_answers){
     if(value["A"] != ''){
       $(option1).append("A. " + value["A"])
       if(answer == "A"){
+        $(option1).removeClass("text-light")
         $(option1).addClass("result-correct")
       }
       if(selected != answer && selected == "A"){
+        $(option1).removeClass("text-light")
         $(option1).addClass("result-wrong")
       }
       $(left).append(option1)
@@ -65,9 +67,11 @@ function displayQuestions(quiz_questions, user_answers){
     if(value["B"] != ''){
       $(option2).append("B. " + value["B"])
       if(answer == "B"){
+        $(option2).removeClass("text-light")
         $(option2).addClass("result-correct")
       }
       if(selected != answer && selected == "B"){
+        $(option2).removeClass("text-light")
         $(option2).addClass("result-wrong")
       }
       $(left).append(option2)
@@ -75,9 +79,11 @@ function displayQuestions(quiz_questions, user_answers){
     if(value["C"] != ''){
       $(option3).append("C. " + value["C"])
       if(answer == "C"){
+        $(option3).removeClass("text-light")
         $(option3).addClass("result-correct")
       }
       if(selected != answer && selected == "C"){
+        $(option3).removeClass("text-light")
         $(option3).addClass("result-wrong")
       }
       $(left).append(option3)
@@ -85,9 +91,11 @@ function displayQuestions(quiz_questions, user_answers){
     if(value["D"] != ''){
       $(option4).append("D. " + value["D"])
       if(answer == "D"){
+        $(option4).removeClass("text-light")
         $(option4).addClass("result-correct")
       }
       if(selected != answer && selected == "D"){
+        $(option4).removeClass("text-light")
         $(option4).addClass("result-wrong")
       }
       $(left).append(option4)

@@ -17,6 +17,9 @@ $(document).ready(function(){
                 console.log(error)
             }
         });
+        let next_link = "./learn/1"
+        setTimeout("window.location.href= '"+next_link+"'",500);
+        console.log("delay for fixing safari bug")
     });
 
 });

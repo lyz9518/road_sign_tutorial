@@ -54,7 +54,10 @@ $(document).ready(function(){
                 console.log(error)
             }
         });
-        window.location.href = next_link
+        
+        setTimeout("window.location.href= '"+next_link+"'",300);
+        console.log("delay for fixing safari bug")
+         
     });
 
     $("#mark").on("click", function() {
