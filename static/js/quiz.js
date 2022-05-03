@@ -94,7 +94,7 @@ function mark(){
 
 function hint(){
     if($("#hint").text() == '')
-    	$("#hint").text("Hint: Test Hint For Question " + num + ", To Be Inplemented.")
+    	$("#hint").text(question.hint)
     else
     	$("#hint").text("")
 }
