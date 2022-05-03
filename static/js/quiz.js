@@ -14,7 +14,7 @@ function timer(){
     let current_time = Date.now() / 1000
     let A = parseInt((end_time - parseInt(end_time)) * 1000)
     let B = parseInt((current_time - parseInt(current_time)) * 1000)
-
+    
    	if(A > B){
 		setTimeout(timer, A - B, 0);
    	}else if (A == B){
@@ -52,12 +52,7 @@ function selectSingle(radio){
 		success: function(result){
 			console.log('success', result)
 			if(result.status == 200){
-        if(num < 10){
-          goToQuestion(num+1)
-        }
-        if(num == 10){
-          goToQuestion(num)
-        }
+				goToQuestion(num + 1)
 			}
 		},
 		error: function(request, status, error){
